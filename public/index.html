@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoAI - Voice Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise"></div>
+
+    <div class="container">
+
+        <header class="hero">
+            <div class="eyebrow">
+                <span class="dot"></span>
+                VOICE INTERFACE
+            </div>
+
+            <h1>EchoAI</h1>
+            <p class="subtitle">Speak it. See it. Type it. Hear it.</p>
+
+            <div class="hero-wave" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </header>
+
+        <!-- Speech to Text Section -->
+        <section class="card">
+            <div class="card-head">
+                <span class="index">01</span>
+                <div>
+                    <h2>Speech → Text</h2>
+                    <p>Speak into your microphone and watch it transcribe live</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">
+                    <span class="mic-icon" aria-hidden="true"></span>
+                    Start Listening
+                </button>
+                <button id="stopBtn" class="btn btn-ghost" disabled>
+                    <span class="stop-icon" aria-hidden="true"></span>
+                    Stop
+                </button>
+            </div>
+
+            <div id="transcript" class="output">Your transcription will appear here&hellip;</div>
+        </section>
+
+        <!-- Text to Speech Section -->
+        <section class="card">
+            <div class="card-head">
+                <span class="index">02</span>
+                <div>
+                    <h2>Text → Speech</h2>
+                    <p>Type anything and hear it spoken back to you</p>
+                </div>
+            </div>
+
+            <textarea id="ttsInput" placeholder="Type something here..."></textarea>
+
+            <div class="controls">
+                <button id="speakBtn" class="btn btn-primary">
+                    <span class="speak-icon" aria-hidden="true"></span>
+                    Speak
+                </button>
+            </div>
+        </section>
+
+        <footer class="foot">Powered by the Web Speech API</footer>
+    </div>
+
+    <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+    <script src="app.js"></script>
+</body>
+</html>
