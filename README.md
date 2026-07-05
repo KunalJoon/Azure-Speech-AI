@@ -1,5 +1,6 @@
 EchoAI 🎤
 Talk to your browser. Let it talk back.
+[live link](achoai-cgfnebhjbzgjgeff.centralindia-01.azurewebsites.net)
 
 EchoAI is a voice notes app built with Azure AI Speech. Speak into your mic and watch it transcribe in real time. Type anything and hear it spoken back using a neural AI voice.
 
